@@ -1,5 +1,5 @@
 {
-  "name": "ebay-emails-api",
+  "name": "ebay-emails-client",
   "version": "1.0.0",
   "description": "Automated transactional emails for customer follow up on Ebay",
   "author": "Make It Count <mike@makeitcount.cc>",
@@ -16,7 +16,7 @@
   "main": "src/app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sidewalksalsa/ebay-emails.git"
+    "url": "https://github.com/sidewalksalsa/ebay-emails-client.git"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
