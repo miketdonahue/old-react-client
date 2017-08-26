@@ -3,3 +3,12 @@ node_modules/
 !src/node_modules
 *.DS_Store
 yarn-error.log
+public/bundle.js
+node_modules/
+.eslintcache
+coverage/
+.nyc_output
+public/*bundle*
+*.map
+*.bundle.js
+.sass-cache/

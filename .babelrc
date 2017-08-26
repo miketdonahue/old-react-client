@@ -1,0 +1,31 @@
+{
+  "presets": [
+    "node6",
+    "react",
+    ["env", {
+      "targets": {
+        "browsers": "last 2 versions"
+      },
+      "loose": false, // True would include a smaller code-set, but leave room for edge cases
+      "modules": false // Tell Babel to skip converting the modules from import to require because Webpack 3 understands them; Enabling static inclusion; This is called tree-shaking
+    }]
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "babel-plugin-syntax-dynamic-import", // Allows babel to understand import()
+    "babel-plugin-dynamic-import-webpack", // Transpiles import() to ensure()
+    "babel-plugin-transform-class-properties"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "babel-plugin-transform-es2015-modules-commonjs"
+      ]
+    },
+    "server": {
+      "plugins": [
+        "babel-plugin-transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+}
