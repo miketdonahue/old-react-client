@@ -1,0 +1,92 @@
+@import "variables";
+
+.text-field {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+
+  &--invalid .text-field__input {
+    border-bottom-color: red;
+
+    &:focus,
+    &:hover {
+      border-bottom-color: red;
+    }
+  }
+
+  &--invalid .text-field__label {
+    color: red;
+  }
+
+  &--invalid .text-field__bottom-line {
+    &:after {
+      background: red;
+    }
+  }
+
+  &--invalid .text-field__helper-text {
+    color: red;
+  }
+}
+
+.text-field__label {
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  color: #8a716a;
+}
+
+.text-field__input {
+  font-size: 100%;
+  width: 100%;
+  padding: 0;
+  padding-top: 1.25em;
+  padding-bottom: 0.5em;
+  color: $text-field-font-color;
+  border: none;
+  border-bottom: 1px solid $text-field-border-color;
+  outline: none;
+
+  caret-color: $text-field-font-color;
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $text-field-font-color;
+  }
+
+  &:focus ~ .text-field__bottom-line:after {
+    width: 100%;
+    transition: 0.3s ease all;
+  }
+
+  &:disabled {
+    border-bottom: 1px dotted $text-field-disabled-border-color;
+  }
+
+  &:disabled + .text-field__label {
+    color: $text-field-disabled-label-color;
+  }
+}
+
+.text-field__bottom-line {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    content: "";
+    background: $text-field-font-color;
+  }
+}
+
+.text-field__helper-text {
+  font-size: 0.750em;
+  min-height: 20px;
+  margin-top: 0.5em;
+  color: #05668d;
+}
